@@ -1,6 +1,7 @@
 package com.cesar.gestioncolegio.gestioncolegioapp.controllers;
 
 
+import com.cesar.gestioncolegio.gestioncolegioapp.models.dto.UserDto;
 import com.cesar.gestioncolegio.gestioncolegioapp.models.entities.User;
 import com.cesar.gestioncolegio.gestioncolegioapp.services.IUserService;
 import jakarta.validation.Valid;
@@ -32,7 +33,7 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAll(){
+    public List<UserDto> getAll(){
         return iUserService.findAll();
 
     }
